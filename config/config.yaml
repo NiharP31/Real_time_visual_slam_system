@@ -1,12 +1,19 @@
 feature_detector:
-  num_features: 1000
+  num_features: 2000
   scale_factor: 1.2
   num_levels: 8
+  edge_threshold: 19
+  first_level: 0
+  wta_k: 2
+  patch_size: 31
+  fast_threshold: 15
+  show_keypoints: true
 
 feature_matcher:
-  use_ratio_test: true
+  cross_check: false
   ratio_threshold: 0.75
+  show_matches: true
 
 tracker:
-  min_matches: 50
-  ransac_threshold: 1.0
+  min_matches: 15
+  keyframe_interval: 3
